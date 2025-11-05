@@ -1,0 +1,367 @@
+body {
+  /* Menambah padding di atas body agar konten tidak tertutup header */
+  padding-top: 60px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f0f2f5;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+body.dark-mode header {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #e0e0e0;
+}
+/* Header */
+header {
+  position: fixed; /* Mengunci posisi header */
+  top: 0; /* Menempatkannya di paling atas halaman */
+  left: 0; /* Memastikan header dimulai dari kiri */
+  width: 100%; /* Memastikan header membentang selebar halaman */
+  z-index: 99; /* Memastikan header berada di atas konten lain saat scrolling */
+  background-color: #ffffff; /* Latar belakang header terang */
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+/* ... (Gaya CSS Dark Mode lainnya tetap sama) ... */
+nav {
+  margin-left: auto;
+  margin-right: 25px;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555; /* Warna tautan terang */
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #007bff; /* Warna hover tautan terang */
+}
+section {
+  min-height: 100vh; /* biar setiap section tampil full layar */
+  padding: 80px 20px;
+}
+
+.home-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: none;
+  margin: 0;
+  padding: 0 40px;
+  padding-top: 50px;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3.5em; /* Ukuran font besar */
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #333; /* Warna teks Light Mode */
+}
+
+.hero-text .subtitle {
+  font-size: 1.5em;
+  line-height: 1.4;
+  color: #666; /* Warna teks sekunder Light Mode */
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: 600px;
+  border-radius: 8px; /* Sudut sedikit melengkung */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Main Content - Article Title */
+.main-title {
+  text-align: center;
+  margin: 40px auto 30px;
+  font-size: 2.8em;
+  font-weight: bold;
+  color: #333; /* Warna judul terang */
+}
+
+/* Article Grid */
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsif */
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: #ffffff; /* Latar belakang card terang */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  padding: 15px;
+  flex-grow: 1; /* Agar konten mengisi sisa ruang */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-content h2 {
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 0.9em;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Agar deskripsi mengisi ruang */
+}
+
+.card-meta {
+  font-size: 0.8em;
+  color: #999;
+  align-self: flex-end; /* Posisikan di bawah */
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsif */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 30px auto 50px;
+  padding: 0 40px; /* Jaga padding agar sejajar dengan header */
+}
+
+.gallery-item {
+  background-color: #ffffff; /* Latar belakang item terang */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 250px; /* Tinggi gambar yang seragam */
+  object-fit: cover; /* Pastikan gambar mengisi kotak tanpa terdistorsi */
+  display: block;
+}
+
+/* Footer */
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+  color: #555;
+}
+
+/* Tombol Tema */
+#theme-toggle {
+  /* Gaya untuk Kontainer Tombol */
+  background: #e0e0e0; /* Latar belakang tombol Light Mode */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-right: 50px;
+  cursor: pointer;
+  padding: 2px;
+  display: flex; /* Untuk menempatkan dua kotak bersebelahan */
+  gap: 2px;
+  transition: background-color 0.3s, border-color 0.3s;
+  outline: none;
+}
+
+.theme-box {
+  /* Gaya untuk Setiap Kotak (Matahari dan Bulan) */
+  width: 60px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 1.1em;
+  color: #555; /* Warna ikon default (non-aktif) */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ketika Light Mode Aktif, Kotak Matahari Disorot */
+.sun-box {
+  background-color: #ffffff; /* Warna latar aktif (sorot) */
+  color: #333;
+}
+
+/* Kotak Bulan (non-aktif di Light Mode) */
+.moon-box {
+  background-color: transparent;
+  color: #555;
+}
+
+body.dark-mode #theme-toggle {
+  background: #101010; /* Latar belakang tombol Dark Mode */
+  border-color: #333;
+}
+
+/* Ketika Dark Mode Aktif, Kotak Bulan Disorot */
+body.dark-mode .moon-box {
+  background-color: #4da6ff; /* Warna latar aktif (sorot) */
+  color: #fff;
+}
+
+/* Kotak Matahari (non-aktif di Dark Mode) */
+body.dark-mode .sun-box {
+  background-color: transparent;
+  color: #999;
+}
+/* --- DARK MODE OVERRIDES --- */
+body.dark-mode {
+  background-color: #1e1e1e; /* Latar belakang gelap */
+  color: #e0e0e0; /* Warna teks gelap */
+}
+
+body.dark-mode header {
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #e0e0e0;
+}
+
+body.dark-mode nav ul li a {
+  color: #c0c0c0;
+}
+
+body.dark-mode nav ul li a:hover {
+  color: #79bff8;
+}
+
+body.dark-mode #theme-toggle {
+  color: #c0c0c0;
+}
+/*Home*/
+body.dark-mode .hero-text h1 {
+  color: #e0e0e0; /* Warna teks Dark Mode */
+}
+
+body.dark-mode .hero-text .subtitle {
+  color: #b0b0b0; /* Warna teks sekunder Dark Mode */
+}
+
+body.dark-mode .hero-text .date {
+  color: #999;
+}
+/* Artike */
+body.dark-mode .main-title {
+  color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .card-content h2 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .card-content p {
+  color: #b0b0b0;
+}
+
+body.dark-mode .card-meta {
+  color: #888;
+}
+
+/* Gaya untuk Ikon Media Sosial */
+.social-icons {
+  margin-bottom: 10px; /* Jarak antara ikon dan teks copyright */
+}
+
+.social-icons a {
+  color: #555; /* Warna ikon default (Light Mode) */
+  font-size: 1.5em; /* Ukuran ikon */
+  margin: 0 10px;
+  transition: color 0.3s;
+  text-decoration: none; /* Hilangkan garis bawah */
+}
+
+.social-icons a:hover {
+  color: #007bff; /* Warna saat di-hover */
+}
+
+/* --- DARK MODE OVERRIDES (Revisi Footer) --- */
+
+body.dark-mode footer {
+  background-color: #2a2a2a;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.15);
+  color: #c0c0c0;
+}
+
+body.dark-mode .social-icons a {
+  color: #c0c0c0; /* Warna ikon Dark Mode */
+}
+
+body.dark-mode .social-icons a:hover {
+  color: #4da6ff; /* Warna hover Dark Mode */
+}
+body.dark-mode .gallery-item {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .gallery-item:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
