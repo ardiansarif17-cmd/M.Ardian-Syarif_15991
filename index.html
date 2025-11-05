@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Daily Journal - Article</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body class="dark-mode">
+    <header>
+      <div class="logo">My Daily Journal</div>
+      <nav>
+        <ul>
+          <li>
+            <a href="#home" class="nav-link active" data-target="home">Home</a>
+          </li>
+          <li>
+            <a href="#article" class="nav-link" data-target="article"
+              >Article</a
+            >
+          </li>
+          <li>
+            <a href="#gallery" class="nav-link" data-target="gallery"
+              >Gallery</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <button id="theme-toggle" aria-label="Toggle dark/light mode">
+        <div class="theme-box sun-box">
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="theme-box moon-box active">
+          <i class="fas fa-moon"></i>
+        </div>
+      </button>
+    </header>
+
+    <main>
+      <section id="home" class="page-section active">
+        <div class="home-hero">
+          <div class="hero-text">
+            <h1>Selamat Datang di Daily Journal Saya</h1>
+            <p class="subtitle">
+              Tempat mencatat semua kegiatan sehari-hari yang ada tanpa
+              terkecuali
+            </p>
+          </div>
+          <div class="hero-image">
+            <img src="img/awal.jpg" alt="jam" />
+          </div>
+        </div>
+      </section>
+
+      <section id="article" class="page-section">
+        <h1 class="main-title">Article</h1>
+        <div class="article-grid">
+          <div class="card">
+            <img src="img/perpusatakaan.jpeg" alt="Perpustakaan Kampus" />
+            <div class="card-content">
+              <h2>Perpustakaan Kampus</h2>
+              <p>
+                Perpustakaan adalah lembaga atau tempat yang menyimpan dan
+                mengelola koleksi buku dan bahan pustaka lainnya, baik dalam
+                bentuk cetak maupun digital, untuk digunakan oleh masyarakat.
+              </p>
+              <span class="card-meta">Last updated 3 mins ago</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/class.jpg" alt="Ruang Kelas" />
+            <div class="card-content">
+              <h2>Ruang Kelas</h2>
+              <p>Tempat di mana untuk mendukung proses belajar mengajar</p>
+              <span class="card-meta">Last updated 3 mins ago</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="img/kelompok.jpg" alt="Kelompok Belajar" />
+            <div class="card-content">
+              <h2>Kelompok Belajar</h2>
+              <p>
+                Sekelompok individu yang belajar bersama secara kolaboratif
+                untuk mencapai tujuan tertentu, seperti meningkatkan pemahaman
+                materi, prestasi belajar, dan kemampuan sosial.
+              </p>
+              <span class="card-meta">Last updated 3 mins ago</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="page-section">
+        <h1 class="main-title">Gallery</h1>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="img/c2.jpg" alt="class" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/1.jpg" alt="Mahasiswa" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/2.jpg" alt="diskusi" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/3.jpg" alt="ngobrol" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/4.jpg" alt="meeting" />
+          </div>
+          <div class="gallery-item">
+            <img src="img/6.jpg" alt="belajar" />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://www.whatsapp.com/" target="_blank"
+          ><i class="fab fa-whatsapp"></i
+        ></a>
+        <a href="https://x.com/" target="_blank"
+          ><i class="fab fa-twitter"></i
+        ></a>
+      </div>
+      <p>&copy; 2023 My Daily Journal.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
